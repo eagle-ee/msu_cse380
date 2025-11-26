@@ -1,0 +1,1 @@
+{"status": 1, "jwt": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJ1c2VybmFtZSI6ICJqYW1lcy5tYXJpYW5pIiwgImFjY2VzcyI6ICJUcnVlIn0=.e4d6e529e675f2bdd363da4c50219317375b7cc7d49da91083d1f0f09044ff89"}
