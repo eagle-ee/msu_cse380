@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS events;
+DROP TABLE IF EXISTS file_events;
+
+CREATE TABLE events(id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, event TEXT, timestamp DATETIME);
+CREATE TABLE file_events(id INTEGER, filename TEXT, FOREIGN KEY (id) REFERENCES events(id));

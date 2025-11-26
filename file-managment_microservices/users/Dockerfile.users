@@ -1,0 +1,14 @@
+FROM python:latest
+
+COPY app.py /app/
+COPY user.sql /app/
+COPY user.db /app/
+
+WORKDIR /app
+
+RUN pip3 install Flask
+RUN pip3 install requests
+
+ENV FLASK_APP=app.py
+
+CMD ["flask", "run", "--port", "5000", "--host=0.0.0.0"]

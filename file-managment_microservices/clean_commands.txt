@@ -1,0 +1,10 @@
+docker build --no-cache -f users/Dockerfile.users -t users-service users
+docker build --no-cache -f documents/Dockerfile.documents -t documents-service documents
+docker build --no-cache -f search/Dockerfile.search -t search-service search
+docker build --no-cache -f logging/Dockerfile.logs -t logging-service logging
+
+docker run -d --name users-container --network=eaglebre -p 9000:5000 -v $(pwd)/key.txt:/app/key.txt users-service
+docker run -d --name documents-container --network=eaglebre -p 9001:5001 -v $(pwd)/key.txt:/app/key.txt documents-service
+docker run -d --name search-container --network=eaglebre -p 9002:5002 -v $(pwd)/key.txt:/app/key.txt search-service
+docker run -d --name logging-container --network=eaglebre -p 9003:5003 -v $(pwd)/key.txt:/app/key.txt logging-service
+
